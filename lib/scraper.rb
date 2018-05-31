@@ -32,7 +32,7 @@ class Scraper
     end   
     
     def make_courses   #iterates over the collection and makes a new instance of Course class for each while assigning it the attributes
-      get_courses.each do |post|
+      self.get_courses.each do |post|
         post = Course.new
         course.title = post.css("h2").text
         course.schedule = post.css(".date").text
