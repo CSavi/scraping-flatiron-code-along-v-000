@@ -26,20 +26,19 @@ class Scraper
       #   course.schedule = post.css(".date").text 
       #   course.description = post.css("p").text 
      
-   # binding.pry 
-    
+  
     def get_courses
-      get_page.css(".post")
+      self.get_page.css(".post")
     end   
     
-    # def make_courses
-    #   get_courses.each do |p|
-    #     p = Course.new
-    #     course.title = 
-    #     course.schedule = 
-    #     course.description = 
-    #   end 
-    # end     
+    def make_courses
+      get_courses.each do |p|
+        p = Course.new
+        course.title = 
+        course.schedule = 
+        course.description = 
+      end 
+    end     
 end
 
 Scraper.new.get_page
